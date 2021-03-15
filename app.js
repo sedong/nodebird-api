@@ -21,7 +21,7 @@ nunjucks.configure('views',{
     express: app,
     watch: true,
 });
-sequelize.sync({force:false})
+sequelize.sync({force:false}) // force true명 삭제후 생성 false명 없으면 생성, alter true면 변경이 있으면 수정
     .then(() => {
         console.log('데이터베이스 연결 성공');
     })
